@@ -45,6 +45,7 @@ git clone https://github.com/luxonis/depthai-ros.git --branch foxy-devel
 git clone https://github.com/luxonis/depthai-ros-examples.git --branch foxy-wip
 git clone https://github.com/ros-perception/vision_msgs.git --branch foxy
 cd ~/ros2_ws
+catkin_make_isolated --cmake-args -D depthai_DIR=~/depthai-core/build/install/lib/cmake/depthai
 ```
 
 
