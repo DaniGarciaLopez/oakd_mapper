@@ -39,8 +39,8 @@ cd build
 cmake .. -D BUILD_SHARED_LIBS=ON
 cmake --build . --parallel --config Release --target install`  
 cd ~
-mkdir -p ros2_ws/src
-cd ros2_ws/src
+mkdir -p ros_ws/src
+cd ros_ws/src
 git clone https://github.com/luxonis/depthai-ros.git --branch noetic-devel
 git clone https://github.com/luxonis/depthai-ros-examples.git --branch noetic-devel
 git clone https://github.com/ros-perception/vision_msgs.git --branch noetic-devel
