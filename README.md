@@ -41,11 +41,11 @@ cmake --build . --parallel --config Release --target install`
 cd ~
 mkdir -p ros2_ws/src
 cd ros2_ws/src
-git clone https://github.com/luxonis/depthai-ros.git --branch foxy-devel
-git clone https://github.com/luxonis/depthai-ros-examples.git --branch foxy-wip
-git clone https://github.com/ros-perception/vision_msgs.git --branch foxy
-cd ~/ros2_ws
-catkin_make_isolated --cmake-args -D depthai_DIR=~/depthai-core/build/install/lib/cmake/depthai
+git clone https://github.com/luxonis/depthai-ros.git --branch noetic-devel
+git clone https://github.com/luxonis/depthai-ros-examples.git --branch noetic-devel
+git clone https://github.com/ros-perception/vision_msgs.git --branch noetic-devel
+cd ~/ros_ws
+catkin_make --cmake-args -D depthai_DIR=~/depthai-core/build/install/lib/cmake/depthai
 ```
 
 
