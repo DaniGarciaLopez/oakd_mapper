@@ -28,3 +28,24 @@ Compile packages:
 cd ~/ros2_ws/
 colcon build
 ```
+
+### Install OAK-D driver
+```
+cd ~
+git clone --recursive https://github.com/luxonis/depthai-core.git --branch develop
+cd ~/depthai-core
+mkdir build
+cd build
+cmake .. -D BUILD_SHARED_LIBS=ON
+cmake --build . --parallel --config Release --target install`  
+cd ~
+mkdir -p ros2_ws/src
+cd ros2_ws/src
+git clone https://github.com/luxonis/depthai-ros.git --branch foxy-devel
+git clone https://github.com/luxonis/depthai-ros-examples.git --branch foxy-wip
+git clone https://github.com/ros-perception/vision_msgs.git --branch foxy
+cd ~/ros2_ws
+```
+
+
+
