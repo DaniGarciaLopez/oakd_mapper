@@ -2,6 +2,7 @@
 
 ## Installation (tested on Ubuntu 20.04)
 [Install ROS2 Foxy](https://docs.ros.org/en/foxy/Installation/Linux-Install-Debians.html)
+
 Don't forget to install colcon:
 ```
 sudo apt install python3-colcon-common-extensions
