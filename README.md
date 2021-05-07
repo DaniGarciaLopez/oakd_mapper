@@ -38,3 +38,6 @@ catkin_make --cmake-args -D depthai_DIR=~/depthai-core/build/install/lib/cmake/d
 ```
 roslaunch oakd_mapper stereo_rgb_nodelet.launch
 ```
+```
+rosbag record -e "(.*)stereo_publisher(.*)"
+```
