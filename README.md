@@ -45,3 +45,11 @@ roslaunch oakd_mapper stereo_rgb_nodelet.launch
 ```
 rosbag record -e "(.*)stereo_publisher(.*)" "(.*)tf_static" "(.*)nodelet_manager/bond"
 ```
+```
+roslaunch rtabmap_ros rtabmap.launch \
+    rtabmap_args:="--delete_db_on_start" \
+    rgb_topic:=/kinect2/qhd/image_color_rect \
+    depth_topic:=/kinect2/qhd/image_depth_rect \
+    camera_info_topic:=/kinect2/qhd/camera_info \
+    approx_sync:=false
+```
