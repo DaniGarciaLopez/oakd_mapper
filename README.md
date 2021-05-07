@@ -19,6 +19,10 @@ source ~/oakd_ws/devel/setup.bash
 cd ~/oakd_ws/src
 git clone --recursive https://github.com/DaniGarciaLopez/oakd_mapper.git
 ```
+### Install additional packages
+```
+sudo apt install ros-noetic-rtabmap ros-noetic-rtabmap-ros
+```
 ### Install OAK-D driver
 ```
 cd ~
@@ -37,4 +41,7 @@ catkin_make --cmake-args -D depthai_DIR=~/depthai-core/build/install/lib/cmake/d
 ## Test
 ```
 roslaunch oakd_mapper stereo_rgb_nodelet.launch
+```
+```
+rosbag record -e "(.*)stereo_publisher(.*)" "(.*)tf_static" "(.*)nodelet_manager/bond"
 ```
