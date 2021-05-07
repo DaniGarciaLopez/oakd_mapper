@@ -27,7 +27,7 @@ cd ~/depthai-core
 mkdir build
 cd build
 cmake .. -D BUILD_SHARED_LIBS=ON
-cmake --build . --parallel --config Release --target install`  
+cmake --build . --parallel --config Release --target install
 ```
 ### Make ROS package
 ```
