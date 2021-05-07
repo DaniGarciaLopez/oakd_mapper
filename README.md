@@ -48,8 +48,8 @@ rosbag record -e "(.*)stereo_publisher(.*)" "(.*)tf_static" "(.*)nodelet_manager
 ```
 roslaunch rtabmap_ros rtabmap.launch \
     rtabmap_args:="--delete_db_on_start" \
-    rgb_topic:=/kinect2/qhd/image_color_rect \
-    depth_topic:=/kinect2/qhd/image_depth_rect \
-    camera_info_topic:=/kinect2/qhd/camera_info \
+    rgb_topic:=/stereo_publisher/stereo/image \
+    depth_topic:=/stereo_publisher/stereo/depth \
+    camera_info_topic:=/stereo_publisher/stereo/camera_info \
     approx_sync:=false
 ```
