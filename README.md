@@ -4,7 +4,7 @@
 ### Install ROS
 [Install ROS Noetic](http://wiki.ros.org/noetic/Installation/Debian)
 
-Create a ROS workspace:
+Create ROS workspace:
 ```
 mkdir -p ~/oakd_ws/src
 ```
@@ -34,6 +34,7 @@ cmake --build . --parallel --config Release --target install
 cd ~/oakd_ws
 catkin_make --cmake-args -D depthai_DIR=~/depthai-core/build/install/lib/cmake/depthai
 ```
-
-
-
+## Test
+```
+roslaunch oakd_mapper stereo_rgb_nodelet.launch
+```
