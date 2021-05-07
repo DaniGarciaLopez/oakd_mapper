@@ -19,6 +19,11 @@ source ~/oakd_ws/devel/setup.bash
 cd ~/oakd_ws/src
 git clone --recursive https://github.com/DaniGarciaLopez/oakd_mapper.git
 ```
+### Install additional packages
+```
+sudo apt install ros-noetic-rtabmap
+sudo apt install ros-noetic-rtabmap-ros
+```
 ### Install OAK-D driver
 ```
 cd ~
