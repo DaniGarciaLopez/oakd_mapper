@@ -4,7 +4,7 @@
     <arg name="camera_model"         default="BW1098OAK" /> <!-- 'zed' or 'zedm' -->
     <arg name="camera_name"          default="oak" />
 
-    <arg name="base_frame"           default="oak-d_frame" />
+    <arg name="base_frame"           default="oakd_frame" />
 
     <arg name="cam_pos_x"             default="0.0" /> <!-- Position respect to base frame (i.e. "base_link) -->
     <arg name="cam_pos_y"             default="0.0" /> <!-- Position respect to base frame (i.e. "base_link) -->
@@ -35,7 +35,7 @@
     </include>
 
 
-    <node name="stereo_publisher" pkg="depthai_examples" type="stereo_node" output="screen" required="true">
+    <node name="stereo_publisher" pkg="depthai_examples" type="rgb_stereo_node" output="screen" required="true">
         <param name="camera_name" value="$(arg camera_name)"/>
         <param name="camera_param_uri" value="$(arg camera_param_uri)"/>
     </node>            
@@ -64,6 +64,8 @@
         <remap from="image_rect" to="/stereo_publisher/stereo/image"/>    
         <remap from="points" to="/stereo_publisher/stereo/points"/>
     </node>
+
+     <node pkg="tf2_ros" type="static_transform_publisher" name="oakd_link" args="0 0 1 0 0 0 /base_link /oakd_frame"/> 
 
     <!-- Rviz configuration -->
   <node type="rviz" name="rviz" pkg="rviz" args="-d $(find oakd_mapper)/rviz/stereo_nodelet.rviz" />
