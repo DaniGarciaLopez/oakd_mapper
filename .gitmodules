@@ -1,0 +1,9 @@
+[submodule "depthai-ros"]
+	path = depthai-ros
+	url = https://github.com/luxonis/depthai-ros.git
+[submodule "depthai-ros-examples"]
+	path = depthai-ros-examples
+	url = https://github.com/luxonis/depthai-ros-examples.git
+[submodule "vision_msgs"]
+	path = vision_msgs
+	url = https://github.com/ros-perception/vision_msgs.git
