@@ -48,8 +48,9 @@ rosbag record -e "(.*)stereo_publisher(.*)" "(.*)tf_static" "(.*)nodelet_manager
 ```
 roslaunch rtabmap_ros rtabmap.launch \
     rtabmap_args:="--delete_db_on_start" \
-    rgb_topic:=/stereo_publisher/stereo/image \
+    rgb_topic:=/stereo_publisher/color/image \
     depth_topic:=/stereo_publisher/stereo/depth \
     camera_info_topic:=/stereo_publisher/stereo/camera_info \
+    frame_id:=/base_link \
     approx_sync:=false
 ```
