@@ -16,6 +16,7 @@ source ~/oakd_ws/devel/setup.bash
 
 ### Clone this repository
 ```
+cd ~/oakd_ws/src
 git clone --recursive https://github.com/DaniGarciaLopez/oakd_mapper.git
 ```
 ### Install OAK-D driver
