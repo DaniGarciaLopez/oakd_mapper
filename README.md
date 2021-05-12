@@ -45,7 +45,7 @@ roslaunch oakd_mapper stereo_rgb_nodelet.launch
 ```
 roslaunch depthai_examples rgb_stereo_node.launch 
 roslaunch depthai_examples stereo_node.launch 
-
+```
 ```
 rosbag record -e "(.*)stereo_publisher(.*)" "(.*)tf_static" "(.*)nodelet_manager/bond"
 ```
