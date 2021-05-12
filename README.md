@@ -34,10 +34,28 @@ cmake .. -D BUILD_SHARED_LIBS=ON
 cmake --build . --parallel --config Release --target install
 ```
 ### Make ROS package
+[Download rgb.bag file](https://drive.google.com/file/d/1eGRTldzFjD78PDNfp45HhFvUsY3a7vwb/view?usp=sharing)
 ```
 cd ~/oakd_ws
 catkin_make --cmake-args -D depthai_DIR=~/depthai-core/build/install/lib/cmake/depthai
 ```
+## How to launch a rosbag
+### RGB Camera and Depth rosbag
+```
+rosbag play rgb.bag
+```
+```
+rosrun rviz rviz -d ~/oakd_ws/src/oakd_mapper/oakd_mapper/rviz/camera_rgb.rviz
+```
+### Stereo Camera and Depth rosbag
+[Download stereo.bag file](https://drive.google.com/file/d/1IaS7RY4khQtgjTO0QRlQkQHQkgRWROx8/view?usp=sharing
+```
+rosbag play stereo.bag
+```
+```
+rosrun rviz rviz -d ~/oakd_ws/src/oakd_mapper/oakd_mapper/rviz/camera_stereo.rviz
+```
+
 ## Test
 ```
 roslaunch oakd_mapper stereo_rgb_nodelet.launch
