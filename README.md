@@ -60,7 +60,7 @@ rosrun rviz rviz -d ~/oakd_ws/src/oakd_mapper/oakd_mapper/rviz/camera_stereo.rvi
 rosbag play stereo.bag -r 0.5
 ```
 ```
-stereo_nodelet_rosbag.launch
+roslaunch oakd_mapper stereo_nodelet_rosbag.launch
 ```
 
 ## Test
