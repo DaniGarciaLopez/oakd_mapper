@@ -20,8 +20,7 @@ source ~/oakd_ws/devel/setup.bash
 cd ~/oakd_ws/src
 git clone --recursive https://github.com/DaniGarciaLopez/oakd_mapper.git
 ```
-### Install Google Cartographer from source
->[Original installation guide](https://google-cartographer-ros.readthedocs.io/en/latest/compilation.html)
+### Install [Google Cartographer](https://google-cartographer-ros.readthedocs.io/en/latest/compilation.html) from source
 
 In order to build Cartographer ROS, we recommend using `wstool <http://wiki.ros.org/wstool>`_ and `rosdep
 <http://wiki.ros.org/rosdep>`_. For faster builds, we also recommend using
