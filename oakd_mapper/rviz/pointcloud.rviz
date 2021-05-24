@@ -4,7 +4,9 @@ Panels:
     Name: Displays
     Property Tree Widget:
       Expanded:
+        - /Global Options1
         - /Status1
+        - /Grid1
       Splitter Ratio: 0.6882352828979492
     Tree Height: 242
   - Class: rviz/Selection
@@ -48,7 +50,7 @@ Visualization Manager:
         Y: 0
         Z: 0
       Plane: XY
-      Plane Cell Count: 10
+      Plane Cell Count: 150
       Reference Frame: <Fixed Frame>
       Value: true
     - Alpha: 1
@@ -105,6 +107,8 @@ Visualization Manager:
       Frame Timeout: 15
       Frames:
         All Enabled: false
+        base_link:
+          Value: true
         oak-d_frame:
           Value: true
         oak_camera_center:
@@ -128,18 +132,19 @@ Visualization Manager:
       Show Axes: true
       Show Names: true
       Tree:
-        oak-d_frame:
-          oak_camera_center:
-            {}
-          oak_left_camera_frame:
-            oak_left_camera_optical_frame:
+        base_link:
+          oak-d_frame:
+            oak_camera_center:
               {}
-          oak_rgb_camera_frame:
-            oak_rgb_camera_optical_frame:
-              {}
-          oak_right_camera_frame:
-            oak_right_camera_optical_frame:
-              {}
+            oak_left_camera_frame:
+              oak_left_camera_optical_frame:
+                {}
+            oak_rgb_camera_frame:
+              oak_rgb_camera_optical_frame:
+                {}
+            oak_right_camera_frame:
+              oak_right_camera_optical_frame:
+                {}
       Update Interval: 0
       Value: true
     - Class: rviz/Image
@@ -246,7 +251,7 @@ Visualization Manager:
   Global Options:
     Background Color: 48; 48; 48
     Default Light: true
-    Fixed Frame: oak-d_frame
+    Fixed Frame: base_link
     Frame Rate: 30
   Name: root
   Tools:
@@ -270,7 +275,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 26.46392822265625
+      Distance: 18.71363067626953
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -278,17 +283,17 @@ Visualization Manager:
         Value: false
       Field of View: 0.7853981852531433
       Focal Point:
-        X: 0
-        Y: 0
-        Z: 0
+        X: 1.4547457695007324
+        Y: 0.9002464413642883
+        Z: 3.920670986175537
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.5797966718673706
+      Pitch: 0.6697970628738403
       Target Frame: <Fixed Frame>
-      Yaw: 2.882190704345703
+      Yaw: 2.3971974849700928
     Saved: ~
 Window Geometry:
   Depth Image:
