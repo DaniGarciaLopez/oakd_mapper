@@ -66,6 +66,6 @@
     </node>
 
     <!-- Rviz configuration -->
-  <node type="rviz" name="rviz" pkg="rviz" args="-d $(find depthai_examples)/rviz/stereo_nodelet.rviz" />
+  <node type="rviz" name="rviz" pkg="rviz" args="-d $(find oakd_mapper)/rviz/pointcloud.rviz" />
 
 </launch>
