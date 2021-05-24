@@ -22,16 +22,14 @@ git clone --recursive https://github.com/DaniGarciaLopez/oakd_mapper.git
 ```
 ### Install [Google Cartographer](https://google-cartographer-ros.readthedocs.io/en/latest/compilation.html) from source
 
-In order to build Cartographer ROS, we recommend using `wstool <http://wiki.ros.org/wstool>`_ and `rosdep
-<http://wiki.ros.org/rosdep>`_. For faster builds, we also recommend using
-`Ninja <https://ninja-build.org>`_.
+In order to build Cartographer ROS, we recommend using `wstool` and `rosdep`. For faster builds, we also recommend using `Ninja`.
 
 On Ubuntu Focal with ROS Noetic use these commands to install the above tools:
 
     sudo apt-get update
     sudo apt-get install -y python3-wstool python3-rosdep ninja-build stow
 
-After the tools are installed, create a new cartographer_ros workspace in 'catkin_ws'.
+After the tools are installed, create a new cartographer_ros workspace in 'cartographer_ws'.
 
     mkdir cartographer_ws
     cd cartographer_ws
