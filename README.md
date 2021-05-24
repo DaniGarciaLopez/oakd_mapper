@@ -1,6 +1,6 @@
 # oakd_mapper
 
-## Installation (tested on Ubuntu 20.04)
+## Installation (tested on Ubuntu 20.04 with ROS Noetic)
 ### Install ROS
 [Install ROS Noetic](http://wiki.ros.org/noetic/Installation/Debian)
 
