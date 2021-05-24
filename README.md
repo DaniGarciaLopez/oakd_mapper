@@ -42,7 +42,7 @@ catkin_make --cmake-args -D depthai_DIR=~/depthai-core/build/install/lib/cmake/d
 ### RGB Camera and Depth rosbag
 [Download rgb.bag file](https://drive.google.com/file/d/1eGRTldzFjD78PDNfp45HhFvUsY3a7vwb/view?usp=sharing)
 ```
-rosbag play rgb.bag
+rosbag play rgb.bag -r 0.5
 ```
 ```
 rosrun rviz rviz -d ~/oakd_ws/src/oakd_mapper/oakd_mapper/rviz/camera_rgb.rviz
@@ -50,10 +50,17 @@ rosrun rviz rviz -d ~/oakd_ws/src/oakd_mapper/oakd_mapper/rviz/camera_rgb.rviz
 ### Stereo Camera and Depth rosbag
 [Download stereo.bag file](https://drive.google.com/file/d/1IaS7RY4khQtgjTO0QRlQkQHQkgRWROx8/view?usp=sharing)
 ```
-rosbag play stereo.bag
+rosbag play stereo.bag -r 0.5
 ```
 ```
 rosrun rviz rviz -d ~/oakd_ws/src/oakd_mapper/oakd_mapper/rviz/camera_stereo.rviz
+```
+### Visualize PointCloud from rosbag
+```
+rosbag play stereo.bag -r 0.5
+```
+```
+roslaunch oakd_mapper stereo_nodelet_rosbag.launch
 ```
 
 ## Test
