@@ -56,8 +56,8 @@ Due to conflicting versions you might need to uninstall the ROS abseil-cpp using
 Build and install.
 
     catkin_make_isolated --install --use-ninja
-    
-
+### Install ROS packages
+    sudo apt-get install ros-noetic-pointcloud-to-laserscan
 ### Install OAK-D driver
 ```
 cd ~
