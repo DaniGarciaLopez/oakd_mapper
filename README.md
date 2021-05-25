@@ -92,7 +92,7 @@ rosrun rviz rviz -d ~/oakd_ws/src/oakd_mapper/oakd_mapper/rviz/camera_stereo.rvi
 ```
 ### Visualize PointCloud from rosbag
 ```
-rosbag play stereo.bag -r 0.5 --topics /stereo_publisher/left/image /stereo_publisher/right/image /stereo_publisher/left/camera_info /stereo_publisher/right/camera_info /stereo_publisher/stereo/camera_info /stereo_publisher/stereo/depth
+rosbag play stereo.bag --loop stereo.bag --rate 0.5 --topics /stereo_publisher/left/image /stereo_publisher/right/image /stereo_publisher/left/camera_info /stereo_publisher/right/camera_info /stereo_publisher/stereo/camera_info /stereo_publisher/stereo/depth
 
 ```
 ```
