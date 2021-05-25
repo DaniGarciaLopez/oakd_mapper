@@ -85,7 +85,7 @@ rosrun rviz rviz -d ~/oakd_ws/src/oakd_mapper/oakd_mapper/rviz/camera_rgb.rviz
 ### Stereo Camera and Depth rosbag
 [Download stereo.bag file](https://drive.google.com/file/d/1IaS7RY4khQtgjTO0QRlQkQHQkgRWROx8/view?usp=sharing)
 ```
-rosbag play stereo.bag -r 0.5
+rosbag play --loop stereo.bag --rate 0.5
 ```
 ```
 rosrun rviz rviz -d ~/oakd_ws/src/oakd_mapper/oakd_mapper/rviz/camera_stereo.rviz
