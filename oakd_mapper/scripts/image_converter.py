@@ -7,7 +7,6 @@ import cv2
 from std_msgs.msg import String
 from sensor_msgs.msg import Image
 from cv_bridge import CvBridge, CvBridgeError
-import message_filters
 
 class image_converter:
 
@@ -16,18 +15,8 @@ class image_converter:
     self.image_pub_right = rospy.Publisher("/stereo_publisher/right/converted/image/",Image, queue_size=10)
 
     self.bridge = CvBridge()
-    self.image_sub_left = message_filters.Subscriber("/stereo_publisher/left/image",Image)
-    self.image_sub_right = message_filters.Subscriber("/stereo_publisher/right/image",Image)
-
-    ts = message_filters.TimeSynchronizer([self.image_sub_left, self.image_sub_right], 10)
-    ts.registerCallback(self.synchro_callback)
-
-  def synchron_callback(self, data_left, data_right):
-    left_img = self.bridge.imgmsg_to_cv2(data_left, '8UC1')
-    right_img = self.bridge.imgmsg_to_cv2(data_right, '8UC1')
-
-    self.image_pub_left.publish(self.bridge.cv2_to_imgmsg(letf_img, 'mono8'))
-    self.image_pub_right.publish(self.bridge.cv2_to_imgmsg(right_img, 'mono8'))
+    self.image_sub_left = rospy.Subscriber("/stereo_publisher/left/image",Image,self.callback_left)
+    self.image_sub_right = rospy.Subscriber("/stereo_publisher/right/image",Image,self.callback_right)
 
   def callback_left(self,data):
     data.encoding = "mono8"
@@ -71,7 +60,7 @@ class image_converter:
 def main(args):
   rospy.init_node('image_converter', anonymous=True)
   ic = image_converter()
-
+  
   try:
     rospy.spin()
   except KeyboardInterrupt:
