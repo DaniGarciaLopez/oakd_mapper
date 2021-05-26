@@ -70,8 +70,10 @@ If you don't have rosdep installed and not initialized please execute the follow
 2. `sudo rosdep init`
 3. `rosdep update`
 
-Install the following vcstool
+Install the following vcstool:
+
 `sudo apt install python3-vcstool`
+
 The following setup procedure assumes you have cmake version >= 3.10.2 and OpenCV version >= 4.0.0
 ```
 cd ~
