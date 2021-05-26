@@ -1,0 +1,15 @@
+<launch>
+        <!-- OAK-D URDF Launch -->
+        <arg name="camera_name"          default="oak" />
+        <arg name="base_frame"           default="oak-d_frame" />
+
+        <include file="$(find depthai_bridge)/launch/urdf.launch">
+                <arg name="base_frame"      value="$(arg  base_frame)"  />
+                <arg name="camera_name"     value="$(arg  camera_name)" />
+        </include>
+
+        <!-- Car URDF Launch -->
+        <param name="robot_description" textfile="$(find oakd_mapper)/urdf/car.urdf" />
+
+        <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+</launch>

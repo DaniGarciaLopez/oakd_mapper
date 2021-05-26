@@ -18,7 +18,7 @@
   <arg name="rtabmapviz_cfg"          default="$(find rtabmap_ros)/launch/config/rgbd_gui.ini" />
   <arg name="rviz_cfg"                default="$(find rtabmap_ros)/launch/config/rgbd.rviz" />
   
-  <arg name="frame_id"                default="oak-d_frame"/>     <!-- Fixed frame id, you may set "base_link" or "base_footprint" if they are published -->
+  <arg name="frame_id"                default="base_link"/>     <!-- Fixed frame id, you may set "base_link" or "base_footprint" if they are published -->
   <arg name="database_path"           default="~/.ros/rtabmap.db"/>
   <arg name="rtabmap_args"            default=""/>   <!-- delete_db_on_start, udebug -->
   <arg name="launch_prefix"           default=""/>

@@ -1,0 +1,28 @@
+<robot name="oakd_car">
+
+  <material name="white">
+    <color rgba="1.0 1.0 1.0 1" />
+  </material>
+  <material name="gray">
+    <color rgba="0.2 0.2 0.2 1" />
+  </material>
+
+  <link name="oak-d_frame"></link>
+
+  <link name="base_link">
+    <visual>
+      <origin xyz="0.01 0 0.015" />
+      <geometry>
+        <box size="2 1 1" />
+      </geometry>
+      <material name="white" />
+    </visual>
+  </link>
+
+  <joint name="camera_joint" type="fixed">
+    <parent link="base_link" />
+    <child link="oak-d_frame" />
+    <origin rpy="0 0 3.1415926" xyz="0 0 1" />
+  </joint>
+
+</robot>

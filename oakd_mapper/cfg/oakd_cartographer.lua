@@ -43,10 +43,10 @@ options = {
   landmarks_sampling_ratio = 1.,
 }
 
-TRAJECTORY_BUILDER_3D.num_accumulated_range_data = 160
+TRAJECTORY_BUILDER_2D.num_accumulated_range_data = 10
 TRAJECTORY_BUILDER_2D.use_imu_data = false
 
-MAP_BUILDER.use_trajectory_builder_3d = true
+MAP_BUILDER.use_trajectory_builder_2d = true
 MAP_BUILDER.num_background_threads = 7
 POSE_GRAPH.optimization_problem.huber_scale = 5e2
 POSE_GRAPH.optimize_every_n_nodes = 320
