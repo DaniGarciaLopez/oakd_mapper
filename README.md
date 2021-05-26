@@ -56,8 +56,8 @@ Due to conflicting versions you might need to uninstall the ROS abseil-cpp using
 Build and install.
 
     catkin_make_isolated --install --use-ninja
-    
-
+### Install ROS packages
+    sudo apt-get install ros-noetic-pointcloud-to-laserscan
 ### Install OAK-D driver
 ```
 cd ~
@@ -85,14 +85,15 @@ rosrun rviz rviz -d ~/oakd_ws/src/oakd_mapper/oakd_mapper/rviz/camera_rgb.rviz
 ### Stereo Camera and Depth rosbag
 [Download stereo.bag file](https://drive.google.com/file/d/1IaS7RY4khQtgjTO0QRlQkQHQkgRWROx8/view?usp=sharing)
 ```
-rosbag play stereo.bag -r 0.5
+rosbag play --loop stereo.bag --rate 0.5
 ```
 ```
 rosrun rviz rviz -d ~/oakd_ws/src/oakd_mapper/oakd_mapper/rviz/camera_stereo.rviz
 ```
 ### Visualize PointCloud from rosbag
 ```
-rosbag play stereo.bag -r 0.5
+rosbag play stereo.bag --loop stereo.bag --rate 0.5 --topics /stereo_publisher/left/image /stereo_publisher/right/image /stereo_publisher/left/camera_info /stereo_publisher/right/camera_info /stereo_publisher/stereo/camera_info /stereo_publisher/stereo/depth
+
 ```
 ```
 roslaunch oakd_mapper stereo_nodelet_rosbag.launch
