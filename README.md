@@ -59,6 +59,20 @@ Build and install.
 ### Install ROS packages
     sudo apt-get install ros-noetic-pointcloud-to-laserscan
 ### Install OAK-D driver
+The following script will install depthai-core and update usb rules and install depthai devices
+
+```
+sudo wget -qO- https://raw.githubusercontent.com/luxonis/depthai-ros/noetic-devel/install_dependencis.sh | bash
+```
+
+If you don't have rosdep installed and not initialized please execute the following steps:
+1. `sudo apt install python3-rosdep` or `sudo apt install python-rosdep2`(melodic)
+2. `sudo rosdep init`
+3. `rosdep update`
+
+Install the following vcstool
+`sudo apt install python3-vcstool`
+The following setup procedure assumes you have cmake version >= 3.10.2 and OpenCV version >= 4.0.0
 ```
 cd ~
 git clone --recursive https://github.com/luxonis/depthai-core.git --branch develop
