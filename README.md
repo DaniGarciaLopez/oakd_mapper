@@ -116,7 +116,7 @@ rosbag play stereo.bag --loop stereo.bag --rate 0.5 --topics /stereo_publisher/l
 roslaunch oakd_mapper stereo_nodelet_rosbag.launch
 ```
 
-## Test
+## Testing
 ```
 roslaunch oakd_mapper stereo_rgb_nodelet.launch
 ```
