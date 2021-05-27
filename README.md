@@ -31,6 +31,7 @@ On Ubuntu Focal with ROS Noetic use these commands to install the above tools:
 
 After the tools are installed, create a new cartographer_ros workspace in 'cartographer_ws'.
 
+    cd ~
     mkdir cartographer_ws
     cd cartographer_ws
     wstool init src
@@ -59,7 +60,7 @@ Build and install.
 ### Install ROS packages
     sudo apt-get install ros-noetic-pointcloud-to-laserscan
 ### Install OAK-D driver
-The following script will install depthai-core and update usb rules and install depthai devices
+The following script will install depthai-core and update usb rules and install depthai devices:
 
 ```
 sudo wget -qO- https://raw.githubusercontent.com/luxonis/depthai-ros/noetic-devel/install_dependencis.sh | bash
